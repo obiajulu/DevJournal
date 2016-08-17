@@ -9,9 +9,9 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 
 # Github footprints... commit and PR history for the summer:
 
-I used Git for revision control and code management throughout the summer, and used Github to host online repos (indeed, the first challenge of the summer was learning the ins-and-outs of Git). Other than all of the great management and collaborative features, Git and Github make it super simple to track progress and productivity. So, I figured I've first show my Github footprint for the summer, and then go into more details about exactly what it shows.
+I used Git for revision control and code management throughout the summer, and used Github to host online repos (indeed, the first challenge of the summer was learning the ins-and-outs of Git). Other than all of the great management and collaborative features, Git and Github make it super simple to track progress and productivity. 
 
-Below is an accummulative list of most of the commits I made this summer, organized by what aspect of the project I was working on. 
+Below is an accummulative list of most of the commits I made this summer organized by what aspect of the project I was working on, and the PRs I opened. 
 
 ### Commit History
 - Experimenting with basic Adam Bashforth Solver: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu)
@@ -24,7 +24,6 @@ Below is an accummulative list of most of the commits I made this summer, organi
 ### PRs this summer: 
 - Still open: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3AOpen](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3AOpen)
 - Merged/Closed [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3Aclosed](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3Aclosed)
-
 
 But my Github footprint only tells part of the story. I do my best to fill in the rest, and write about what I was up to.
 
