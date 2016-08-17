@@ -27,14 +27,19 @@ plottestsuite()
 
 ## More natural notebook mode
 
+The terminal mode did the job it was supposed to do, though, it was a bit hacky. For a more long term solution, we explored the idea of having the primary interface with IVPTestSuite be through a IJulia notebook. There is currently a pull request open for this ongoing project and a gist which shows what the notebook looks like. 
+
+<script src="https://gist.github.com/obiajulu/95277dc3c353b2245fcb6f3269615019.js"></script>
+
+While this may indeed be a valid long term solution, I have my reservations because it seems running the benchmark scripts in the notebook yields different results from in the terminal. I am still looking into this issue.
+
 # JuliaCon
 ## My Talk
 <center><iframe width="700" height="500" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe></center>
 ## Meeting people from Alan to Yingbo
 ## Imfamous PR 49 "[WIP] Adding iterators"
 
-# TL;DR: 
-##Commit History:
+# Commit and PR History:
 - Experimenting with basic Adam Bashforth Solver: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu)
 - Adam Moulton Solvers: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu)
 - Radau Solver: [https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu)
@@ -42,7 +47,10 @@ plottestsuite()
 - Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
 - Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
 Authored PRs: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
-- 
+
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
 The major goal of GSoC which I was not able to finish (yet!) was finishing the implementation of the `radua` solver. However, my senior year at college doesn't start until September 14th, and I am planning to get `radau` to a stable state by then. My mentor @mauro3 has more freetime in September, so I think we can do it. 
+
+## Polishing off the IVPTestSuite notebookmode
+As mentioned above, there is a discripency between the benchmark results of IVPTestSuite when run in terminal mode versus notebook mode. I would like to get to the bottom of this, as well as possibly add more interactive plotting functionality by switching from PyPlot to Plotly. 
