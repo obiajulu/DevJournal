@@ -17,5 +17,10 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 ## Experimenting with terminal mode
 ## More natural notebook mode
 
+# JuliaCon
+## My Talk
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe>
+## Meeting people from Alan to Yingbo
+
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
