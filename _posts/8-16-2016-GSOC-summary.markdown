@@ -56,7 +56,7 @@ The real strength of Adam Bashforth methods is the minimal amount of derivative 
 |1e-14 | 6179 | 61652|
 </center>
 
-### `radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
+### `ode_radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
 Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The basic theorey between the solver.
 
@@ -64,12 +64,11 @@ Also, anticipating the move of ODE.jl towards iterative formulations of solvers,
 
 {% highlight ruby %}
 function ode_radau(f,y0,tspan,order)
-  #set up
-  ...
+  #set up state, `st`
+  
   while !done_radau(st)
-     @show st.step
      stats = trialstep!(st)
-     err, stats, st = errorcontrol!(st) # (1) adaptive stepsize (2) error
+     err, stats, st = errorcontrol!(st)
      if err < 1
          stats, st = ordercontrol!()
          accept = true
@@ -125,17 +124,17 @@ The terminal mode did the job it was supposed to do, though, it was a bit hacky.
 While this may indeed be a valid long term solution, I have my reservations because it seems running the benchmark scripts in the notebook yields different results from in the terminal. I am still looking into this issue.
 
 # JuliaCon
+Another great part of my Google Summer of Code experience was attending the 3rd annual [JuliaCon](www.juliacon.org) in MIT's StataCenter in Early June. It is conference run by Julia developers, for Julia developers (and users), where there were "cutting-edge technical talks, hands-on workshops, a chance to rub shoulders with Julia's creators." I was invited to give a short talk about my work, which I embedded below.
 ### My Talk
 <center><iframe width="700" height="500" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe></center>
 
 ### Meeting people from Alan to Yingbo
+While at JuliaCon, I met a bright high school student, by the name of Yingbo, who was a ODE.jl user. After talking things over with him and my second mentor Jiahao, we made room for him to join us in the lab for the rest of my stay and even after I left. It's been great collaborating with him this summer. During JuliaCon, I was also able to talk face-to-face with Pawel (@pwl) who is a graduate student in Applied Mathematics in Germany and a main contributor to ODE.jl. We worked on his imfamous [PR 49](https://github.com/JuliaLang/ODE.jl/pull/49), "[WIP] Adding iterators"]. I was able to learn a lot about the interative formulation for ODe solvers, and later toyed around with implementing multistep methods (like the Adam Bashforth or simple Adam Moulton method) in iterative form. I was also able to stay after JuliaCon for two or so weeks, working out of the lab of Alan Eldman, where Julia was born. Yingbo and I were able to grab a meal with Prof. Eldman and talking to him more about Julia, its past and future direction. 
 
-### Imfamous PR 49 "[WIP] Adding iterators"
+# Oh, the places we'll go...Work left to do
 
-# Oh, the places we'll go
-
-### Finishing `radau` solver before school starts
-The major goal of GSoC which I was not able to finish (yet!) was finishing the implementation of the `radua` solver. However, my senior year at college doesn't start until September 14th, and I am planning to get `radau` to a stable state by then. My mentor @mauro3 has more freetime in September, so I think we can do it. 
+### Finishing `ode_radau` solver before school starts
+The major goal of GSoC which I was not able to finish (yet!) was finishing the implementation of the `ode_radua` solver. However, my senior year at college doesn't start until September 14th, and I am planning to get `ode_radau` to a stable state by then. My mentor @mauro3 has more freetime in September, so I think we can do it. 
 
 ### Polishing off the IVPTestSuite notebookmode
 As mentioned above, there is a discripency between the benchmark results of IVPTestSuite when run in terminal mode versus notebook mode. I would like to get to the bottom of this, as well as possibly add more interactive plotting functionality by switching from PyPlot to Plotly. 
