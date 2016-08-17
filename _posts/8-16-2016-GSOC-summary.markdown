@@ -5,7 +5,7 @@ date:   2016-08-16 22:01:43 +0530
 categories: jekyll update
 author: "obiajulu"
 ---
-Woww, the summer has flown by fast and Google SoC with it! Here, with only one week to go before the final code submission, I wanted to take this moment to pause and look back on all of the work the was done and some of the work still left to do. So, without further ado, here is my GSoc in recap:
+Wowww, the summer has flown by fast and Google SoC with it! Here, with only one week to go before the final code submission, I wanted to take this moment to pause and look back on all of the work the was done and some of the work still left to do. So, without further ado, here is my GSoc in recap:
 
 # Github footprints... commit and PR history for the summer:
 
@@ -31,7 +31,9 @@ But my Github footprint only tells part of the story. I do my best to fill in th
 
 The goal of my Google SoC was to create new ODE solvers and then enhance the testing suite (IVPTestSuite.jl) to benchmark them. I focused mostly on implementing solvers which built upon the classical Adam-Bashforth method (which `ode_ms` implements), all of which are especially suited for nonstiff problems. The classical method for nonstiff problems is a simple fixed step size method (this means the user specifies how many integrator steps to take over the time span, as opposed to adaptive methods, which use some algorithm to increase or decrease the step size to fit the desired accuracy). I decided to implement both a slightly more accurated fixed step method and, mainly, a variable step size, variable order (where order determines the degree of polynomial interpolation between time step points) Adam __Moulton__ method. I named these `ode_am` and `ode113` respectively
 
-### `ode4am`: a step in the right direction ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L61), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
+### `ode_am`: a step in the right direction ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L61), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
+
+This solver is the most basic Adam Moulton. Like the Adam Bashforth solver `ode_ms`, the user specifies the step size for the time range and can set the order for the solver (which is typically set to 4 or 5). Unlike `ode_ms`, the solver has what is called a Corrector-Evaluation (CE) step which yields more accurate results. In a nutshell, after predicting the next `y` and using this to predict `dy` value at `t+dt`, we cycle back and use this predicted `dy` to arrive at a _more_ precise calculation of `y` and then again `dy`. Below we show the yielding increase in performance from the CE step by comparing `ode_ms` to `ode_am`:
 
 ### `ode113`: a fully adaptive Adam Moulton solver ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L173), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
 
@@ -52,11 +54,33 @@ The real strength of Adam Bashforth methods is the minimal amount of derivative 
 
 ### `radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
-Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The name comes from . 
+Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The basic theorey between the solver.
 
-### Side bar: theoretical 
+Also, anticipating the move of ODE.jl towards iterative formulations of solvers, we are implementing this solver in a near iterative form:
+```
+function ode_radau(f,y0,tspan,order)
+  #set up
+  ...
+  while !done_radau(st)
+     @show st.step
+     stats = trialstep!(st)
+     err, stats, st = errorcontrol!(st) # (1) adaptive stepsize (2) error
+     if err < 1
+         stats, st = ordercontrol!()
+         accept = true
+     else
+         rollback!()
+     end
+  return status()
+  end
+end
+
+```
+
+### Side bar: Theory behind the solvers
 
 For those more interested in the thoeretical numerical analysis of these these solvers, we recommend the following sources, which we used while implementing the solvers:
+
 - Hairer, Nørsett, and Wanner's [Solving Ordinary Differential Equations I: Nonstiff Problems](http://www.springer.com/us/book/9783540566700) especially Chapter 2
 - Hairer and Wanner's [Solving Ordinary Differential Equations II:Stiff Problems](http://link.springer.com/book/10.1007%2F978-3-642-05221-7), especially Chapter 8
 - [Wikiversity article on Adam Bashforth and Adam Moulton methods](https://en.wikiversity.org/wiki/Adams-bashforth_and_Adams-moulton_methods)
