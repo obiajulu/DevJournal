@@ -14,7 +14,7 @@ description: "<h3>Hello, world!</h3><h1>DevJournal</h1><h3>Awesome Jekyll Theme 
 
 
 
-baseurl: "/devjournal" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://obiajulu.github.io" # the base hostname & protocol for your site
 github_username:  obiajulu
 
