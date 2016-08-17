@@ -23,12 +23,12 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 ## Meeting people from Alan to Yingbo
 
 # Commit History:
-- Adam Bashforth SOlvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu
-- Adam Moulton Solvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu
-- Radau Solver: https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu
-- IVPTestSuite: https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu  
-- Terminalmode: https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu
-- Notebookmode: https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu
+- Experimenting with basic Adam Bashforth Solver: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu)
+- Adam Moulton Solvers: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu)
+- Radau Solver: [https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu)
+- IVPTestSuite: [https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu)  
+- Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
+- Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
 
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
