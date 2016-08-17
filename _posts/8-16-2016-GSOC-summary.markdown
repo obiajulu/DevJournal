@@ -27,15 +27,15 @@ Below is an accummulative list of most of the commits I made this summer organiz
 
 But my Github footprint only tells part of the story. I do my best to fill in the rest, and write about what I was up to.
 
-# Two New ODE Solvers, and one on the way...
+# Two New ODE solvers, and one on the way...
 
 The goal of my Google SoC was to create new ODE solvers and then enhance the testing suite (IVPTestSuite.jl) to benchmark them. I focused mostly on implementing solvers which built upon the classical Adam-Bashforth method (which `ode_ms` implements), all of which are especially suited for nonstiff problems. The classical method for nonstiff problems is a simple fixed step size method (this means the user specifies how many integrator steps to take over the time span, as opposed to adaptive methods, which use some algorithm to increase or decrease the step size to fit the desired accuracy). I decided to implement both a slightly more accurated fixed step method and, mainly, a variable step size, variable order (where order determines the degree of polynomial interpolation between time step points) Adam __Moulton__ method. I named these `ode_am` and `ode113` respectively
 
-### `ode4am`: a step in the right direction ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), (PR)[https://github.com/JuliaLang/ODE.jl/pull/106])
+### `ode4am`: a step in the right direction ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L61), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
 
-### `ode113`: a fully adaptive Adam Moulton solver ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
+### `ode113`: a fully adaptive Adam Moulton solver ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L173), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
 
-### `radau` : (WIP) an adaptive implicit Runge-Kutta ([commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
+### `radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
 # Enhancements to IVP Benchmarking 
 
