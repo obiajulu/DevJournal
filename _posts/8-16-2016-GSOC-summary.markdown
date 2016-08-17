@@ -43,7 +43,7 @@ Currently, the solver is function and performs comparably (as well or better) to
 
 #### __function evaluations for Pleidas problem `ode113` vs `ode45`__
 The real strength of Adam Bashforth methods is the minimal amount of derivative function evaluation one needs. For each iteration step, this function needs to be evaluated usually only twice (really twice for each attempt of a step, and steps are usually accepted). We present a table of the function evaluations necessary for `ode45` vs `ode113` used to solve the same Pleiadas problem above.
-<center>
+
 |tol | ode113 | ode45|
 |---|---|---|---|
 |1e-7 | 1115 | 2456|
@@ -54,7 +54,6 @@ The real strength of Adam Bashforth methods is the minimal amount of derivative 
 |1e-12 | 2875 | 24548|
 |1e-13 | 3869 | 38900|
 |1e-14 | 6179 | 61652|
-</center>
 
 ### `ode_radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
@@ -125,13 +124,14 @@ While this may indeed be a valid long term solution, I have my reservations beca
 
 # JuliaCon
 Another great part of my Google Summer of Code experience was attending the 3rd annual [JuliaCon](www.juliacon.org) in MIT's StataCenter in Early June. It is conference run by Julia developers, for Julia developers (and users), where there were "cutting-edge technical talks, hands-on workshops, a chance to rub shoulders with Julia's creators." I was invited to give a short talk about my work, which I embedded below.
+
 ### My Talk
 <center><iframe width="700" height="500" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe></center>
 
 ### Meeting people from Alan to Yingbo
 While at JuliaCon, I met a bright high school student, by the name of Yingbo, who was a ODE.jl user. After talking things over with him and my second mentor Jiahao, we made room for him to join us in the lab for the rest of my stay and even after I left. It's been great collaborating with him this summer. During JuliaCon, I was also able to talk face-to-face with Pawel (@pwl) who is a graduate student in Applied Mathematics in Germany and a main contributor to ODE.jl. We worked on his imfamous [PR 49](https://github.com/JuliaLang/ODE.jl/pull/49), "[WIP] Adding iterators"]. I was able to learn a lot about the interative formulation for ODe solvers, and later toyed around with implementing multistep methods (like the Adam Bashforth or simple Adam Moulton method) in iterative form. I was also able to stay after JuliaCon for two or so weeks, working out of the lab of Alan Eldman, where Julia was born. Yingbo and I were able to grab a meal with Prof. Eldman and talking to him more about Julia, its past and future direction. 
 
-# Oh, the places we'll go...Work left to do
+# Oh, the places we'll go... Work left to do
 
 ### Finishing `ode_radau` solver before school starts
 The major goal of GSoC which I was not able to finish (yet!) was finishing the implementation of the `ode_radua` solver. However, my senior year at college doesn't start until September 14th, and I am planning to get `ode_radau` to a stable state by then. My mentor @mauro3 has more freetime in September, so I think we can do it. 
