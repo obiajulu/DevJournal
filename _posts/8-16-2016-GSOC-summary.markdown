@@ -9,17 +9,17 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 
 # Two New ODE Solvers, and one on the way...
 
-### `ode4am`: a ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), (PR)[])
+### `ode4am`: a ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), (PR)[https://github.com/JuliaLang/ODE.jl/pull/106])
 
-### `ode113`: a fully adaptive Adam Moulton solver ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), (PR)[])
+### `ode113`: a fully adaptive Adam Moulton solver ([commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), (PR)[https://github.com/JuliaLang/ODE.jl/pull/106])
 
-### `radau` : (WIP) an adaptive implicit Runge-Kutta ([commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), (PR)[])
+### `radau` : (WIP) an adaptive implicit Runge-Kutta ([commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), (PR)[https://github.com/obiajulu/ODE.jl/pull/3])
 
 # Enhancements to IVP Benchmarking 
 
 With all of these ODE solvesr, a natural question is "which ones works the best?" As may be expected, the answer is not so straight forward. Different problems call for different tools, and the best ODE solver to use will depend heavily on what ODE you are hoping to solve. Thus, there is clearly a need of testing the performance of ODE solvers against various test problems, as a means of both improving or developing a solvers as well as determining which solver to use on real world ODEs. To address these needs, my mentor Mauro built IVPTestSuite.jl roughly two years ago. Unforunately, other developers didn't join in on the project then, but steadily the need for IVPTestSuite back more and more apparent. Thus, I found myself hoping to help address this need and work to further develop the package this summer.  
 
-### Getting the engines running again ([commits](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu), (PRs)[])
+### Getting the engines running again ([commits](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu), (PR)[https://github.com/mauro3/IVPTestSuite.jl/pull/5],(PR)[https://github.com/mauro3/IVPTestSuite.jl/pull/10],(PR)[https://github.com/mauro3/IVPTestSuite.jl/pull/11], (PR)[https://github.com/mauro3/IVPTestSuite.jl/pull/10])
 
 My initial involvement working on Mauro's IVPTestSuite.jl was helping to update the package to be compatible with Julia v0.4 and v0.5. This was also a means for me to learn the innards of the package. Also, one of the early tasks I had was changing the underlying plotting package from Winston to PyPlot. I would work on these tasks in the afternoons, after spending the morning making progress on the new solvers. I worked on them for a week or two. 
 
