@@ -43,7 +43,7 @@ Currently, the solver is function and performs comparably (as well or better) to
 
 #### __function evaluations for Pleidas problem `ode113` vs `ode45`__
 The real strength of Adam Bashforth methods is the minimal amount of derivative function evaluation one needs. For each iteration step, this function needs to be evaluated usually only twice (really twice for each attempt of a step, and steps are usually accepted). We present a table of the function evaluations necessary for `ode45` vs `ode113` used to solve the same Pleiadas problem above.
-
+<center>
 |tol | ode113 | ode45|
 |---|---|---|---|
 |1e-7 | 1115 | 2456|
@@ -54,15 +54,15 @@ The real strength of Adam Bashforth methods is the minimal amount of derivative 
 |1e-12 | 2875 | 24548|
 |1e-13 | 3869 | 38900|
 |1e-14 | 6179 | 61652|
-
+</center>
 
 ### `radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
 Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The basic theorey between the solver.
 
 Also, anticipating the move of ODE.jl towards iterative formulations of solvers, we are implementing this solver in a near iterative form:
-{% highlight ruby %}
 
+{% highlight ruby %}
 function ode_radau(f,y0,tspan,order)
   #set up
   ...
