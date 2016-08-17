@@ -15,6 +15,16 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 # Enhancements to IVP Benchmarking
 ## Getting the engines running again
 ## Experimenting with terminal mode 
+
+The motivation for working on a Julia terminal mode for the IVPTestSuite was all of the benchmarking necessary to review @pawel's "[WIP] Adding iterators" PR. Mauro and I were, for a while, the only ones who knew IVPTestSuite.j well enough to run these important benchmarks, and we came across some serious performance issues. However, others were not able to run the scripts for themselves. Actually, duing JuliaCon (more on that later) I threw together an experimental branch call `terminalmode` which allowed the user to run the testsuites and generate corresponding plots all from the Julia terminal. The script for testing these, which still works since the experimental branch is still up,  was:
+
+{% highlight ruby %}
+Pkg.checkout("IVPTestSuite.jl", "teriminalmode")
+using IVPTestSuite.QuickSuites
+runtestsuite(ODEsolverfns = [ODE.ode113,ODE.ode45, ODE.ode78], abstols = 10.0.^(-5:-1:-14))
+plottestsuite()
+{% endhighlight %}
+
 ## More natural notebook mode
 
 # JuliaCon
@@ -31,7 +41,8 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 - IVPTestSuite preliminaries and new test case: [https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu)  
 - Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
 - Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
-Authored PRs: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu] (https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
+Authored PRs: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
 - 
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
+The major goal of GSoC which I was not able to finish (yet!) was finishing the implementation of the `radua` solver. However, my senior year at college doesn't start until September 14th, and I am planning to get `radau` to a stable state by then. My mentor @mauro3 has more freetime in September, so I think we can do it. 
