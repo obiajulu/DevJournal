@@ -15,7 +15,7 @@ description: "<h3>Hello, world!</h3><h1>DevJournal</h1><h3>Awesome Jekyll Theme 
 
 
 url: "https://obiajulu.github.io"
-baseurl: "/obiajulu.github.io"
+baseurl: ""
 
 github_username:  obiajulu
 
