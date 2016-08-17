@@ -7,14 +7,6 @@ author: "obiajulu"
 ---
 Woww, the summer has flown by fast and Google SoC with it! Here, with only one week to go before the final code submission, I wanted to take this moment to pause and look back on all of the work the was done and some of the work still left to do. So, without further ado, here is my GSoc in recap:
 
-# Commit History:
-- Adam Bashforth SOlvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu
-- Adam Moulton Solvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu
-- Radau Solver: https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu
-- IVPTestSuite: https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu  
-- Terminalmode: https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu
-- Notebookmode: https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu
-
 # Two New ODE Solvers, and one on the way...
 ## `ode4am`: a 
 ## `ode113`: a fully adaptive Adam Moulton solver
@@ -29,6 +21,14 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 ## My Talk
 <iframe width="560" height="315" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe>
 ## Meeting people from Alan to Yingbo
+
+# Commit History:
+- Adam Bashforth SOlvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu
+- Adam Moulton Solvers: https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu
+- Radau Solver: https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu
+- IVPTestSuite: https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu  
+- Terminalmode: https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu
+- Notebookmode: https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu
 
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
