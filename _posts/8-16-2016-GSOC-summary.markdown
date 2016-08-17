@@ -14,21 +14,24 @@ Woww, the summer has flown by fast and Google SoC with it! Here, with only one w
 
 # Enhancements to IVP Benchmarking
 ## Getting the engines running again
-## Experimenting with terminal mode
+## Experimenting with terminal mode 
 ## More natural notebook mode
 
 # JuliaCon
 ## My Talk
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe>
+<center><iframe width="700" height="500" src="https://www.youtube.com/embed/dONbskqVMVs" frameborder="0" allowfullscreen></iframe></center>
 ## Meeting people from Alan to Yingbo
+## Imfamous PR 49 "[WIP] Adding iterators"
 
-# Commit History:
+# TL;DR: 
+##Commit History:
 - Experimenting with basic Adam Bashforth Solver: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu)
 - Adam Moulton Solvers: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu)
 - Radau Solver: [https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu)
-- IVPTestSuite: [https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu)  
+- IVPTestSuite preliminaries and new test case: [https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/master?author=obiajulu)  
 - Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
 - Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
-
+Authored PRs: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu] (https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
+- 
 # Oh, the places we'll go
 ## Finishing `radau` solver before school starts
