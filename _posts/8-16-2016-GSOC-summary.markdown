@@ -35,7 +35,33 @@ The goal of my Google SoC was to create new ODE solvers and then enhance the tes
 
 ### `ode113`: a fully adaptive Adam Moulton solver ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L173), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
 
+#### __function evaluations for Pleidas problem `ode113` vs `ode45`__
+The real strength of Adam Bashforth methods is the minimal amount of derivative function evaluation one needs. For each iteration step, this function needs to be evaluated usually only twice (really twice for each attempt of a step, and steps are usually accepted). We present a table of the function evaluations necessary for `ode45` vs `ode113` used to solve the same Pleiadas problem above.
+
+|tol | ode113 | ode45|
+|---|---|---|---|
+|1e-7 | 1115 | 2456|
+|1e-8 | 1327 | 3890|
+|1e-9 | 1557 | 6170|
+|1e-10 | 1859 | 9776|
+|1e-11 | 2237 | 15488|
+|1e-12 | 2875 | 24548|
+|1e-13 | 3869 | 38900|
+|1e-14 | 6179 | 61652|
+
+
 ### `radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
+
+Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The name comes from . 
+
+### Side bar: theoretical 
+
+For those more interested in the thoeretical numerical analysis of these these solvers, we recommend the following sources, which we used while implementing the solvers:
+- Hairer, Nørsett, and Wanner's [Solving Ordinary Differential Equations I: Nonstiff Problems](http://www.springer.com/us/book/9783540566700) especially Chapter 2
+- Hairer and Wanner's [Solving Ordinary Differential Equations II:Stiff Problems](http://link.springer.com/book/10.1007%2F978-3-642-05221-7), especially Chapter 8
+- [Wikiversity article on Adam Bashforth and Adam Moulton methods](https://en.wikiversity.org/wiki/Adams-bashforth_and_Adams-moulton_methods)
+- [Stiff differential equationsolved by Radau methos](http://ac.els-cdn.com/S037704279900134X/1-s2.0-S037704279900134X-main.pdf?_tid=d6bd8b8a-64bd-11e6-af6f-00000aacb35e&acdnat=1471467899_2d9205f1c3fe6f027801c84794f8835f) 
+- [My Google SoC proposal]()
 
 # Enhancements to IVP Benchmarking 
 
