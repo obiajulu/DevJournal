@@ -21,9 +21,11 @@ Below is an accummulative list of most of the commits I made this summer, organi
 - Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
 - Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
 
-
 ### PRs this summer: 
-[https://github.com/pulls?q=is%3Apr+author%3Aobiajulu](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
+- Still open: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3AOpen](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3AOpen)
+- Merged/Closed [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3Aclosed](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu+is%3Aclosed)
+
+
 But my Github footprint only tells part of the story. I do my best to fill in the rest, and write about what I was up to.
 
 # Two New ODE Solvers, and one on the way...
