@@ -37,6 +37,10 @@ This solver is the most basic Adam Moulton. Like the Adam Bashforth solver `ode_
 
 ### `ode113`: a fully adaptive Adam Moulton solver ([code](https://github.com/obiajulu/ODE.jl/blob/ob/a-b_adaptive/src/adams_methods.jl#L173), [commits](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu), [PR](https://github.com/JuliaLang/ODE.jl/pull/106))
 
+We now reach the aspect of my GSoC project which took the bulk of my time for the summer: implementing a variable order, variable step size Adam Moulton ODE solver. To say the solver is variable order is to mean that it varies the order of the underlying polynomial interpolation which all Adam methods are based on, in order to minimize both the number of steps needed and the error of the result. We approximate this error each step by examining the difference in the `y` value from using the current order and the order one above or one below (this is because if this order varies to much, then we can be sure increaseing the order will yield better result,but if this difference is negigble, than the order is sufficient and may even be lowered). The solver also varies the step size based on this error approximation, to minizime the number of steps used (and thus runtime) while still having an error within the specified error tolerance.
+
+Currently, the solver is function and performs comparably (as well or better) to the other nonstiff solvers in ODE.jl, such as `ode78` and `ode45`. Benchmark results below confirm this:
+
 #### __function evaluations for Pleidas problem `ode113` vs `ode45`__
 The real strength of Adam Bashforth methods is the minimal amount of derivative function evaluation one needs. For each iteration step, this function needs to be evaluated usually only twice (really twice for each attempt of a step, and steps are usually accepted). We present a table of the function evaluations necessary for `ode45` vs `ode113` used to solve the same Pleiadas problem above.
 
@@ -57,7 +61,8 @@ The real strength of Adam Bashforth methods is the minimal amount of derivative 
 Unlike `ode_ms` and `ode113`, `radua` is a solver aimed towards solving stiff ODEs. The basic theorey between the solver.
 
 Also, anticipating the move of ODE.jl towards iterative formulations of solvers, we are implementing this solver in a near iterative form:
-```
+{% highlight ruby %}
+
 function ode_radau(f,y0,tspan,order)
   #set up
   ...
@@ -74,8 +79,9 @@ function ode_radau(f,y0,tspan,order)
   return status()
   end
 end
+{% endhighlight %}
 
-```
+This solver is stil a WIP, and the goal is to finish before school starts. More on that later.
 
 ### Side bar: Theory behind the solvers
 
