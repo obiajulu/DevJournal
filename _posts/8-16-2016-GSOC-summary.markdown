@@ -7,13 +7,13 @@ author: "obiajulu"
 ---
 Woww, the summer has flown by fast and Google SoC with it! Here, with only one week to go before the final code submission, I wanted to take this moment to pause and look back on all of the work the was done and some of the work still left to do. So, without further ado, here is my GSoc in recap:
 
-# Github footprints... Commit and PR History for the Summer:
+# Github footprints... commit and PR history for the summer:
 
 I used Git for revision control and code management throughout the summer, and used Github to host online repos (indeed, the first challenge of the summer was learning the ins-and-outs of Git). Other than all of the great management and collaborative features, Git and Github make it super simple to track progress and productivity. So, I figured I've first show my Github footprint for the summer, and then go into more details about exactly what it shows.
 
-Here is a link to all of the PRs I open this summer: [https://github.com/pulls?q=is%3Apr+author%3Aobiajulu](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
-
 Below is an accummulative list of most of the commits I made this summer, organized by what aspect of the project I was working on. 
+
+### Commit History
 - Experimenting with basic Adam Bashforth Solver: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b?author=obiajulu)
 - Adam Moulton Solvers: [https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/ob/a-b_adaptive?author=obiajulu)
 - Radau Solver: [https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu)
@@ -21,6 +21,9 @@ Below is an accummulative list of most of the commits I made this summer, organi
 - Terminalmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/terminalmode?author=obiajulu)
 - Notebookmode: [https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu](https://github.com/mauro3/IVPTestSuite.jl/commits/notebookmode?author=obiajulu)
 
+
+### PRs this summer: 
+[https://github.com/pulls?q=is%3Apr+author%3Aobiajulu](https://github.com/pulls?q=is%3Apr+author%3Aobiajulu)
 But my Github footprint only tells part of the story. I do my best to fill in the rest, and write about what I was up to.
 
 # Two New ODE Solvers, and one on the way...
