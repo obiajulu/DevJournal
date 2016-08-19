@@ -4,22 +4,34 @@ title:  "Week 1-2 Recap"
 date:   2016-05-12 22:01:43 +0530
 categories: weeklyp_updates
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+###Up-to-date plan for the remainder of the week
+3. (Thursday) __Main goal__: Identify speed slow downs 
+  + Compare current version to version used to make plots for PR
+  + Continue benchmarking with ProfileView
+4. (Friday) __Main goal__: Further Progress in Optimizing `ode113`
+5. (Saturday/Sunday) __Main goal__: Finish optimization of `0de113`
 
-Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+### Main Goals for Weeks 10-17
+1. Finish polishing Adam Bashforth PR (weeks 9-10)
+  1. Finish bench marking for in place or out of place arrays
+  2.
+  3. Reopen pull request
+2. Notebook version of IVPTestSuite (Weeks 11-13) 
+  1.
+  2.
+  3.
+4. Scrubbing code for end of GSoC (Week 13)
+  1. Finalize documentation on new Adam Methods
+  2. Finalize documentation on new IVPTestSuite notebook version
+3. Open Thorough Pull Request for RadauIIA Solver (Weeks 14-17)
+  1. Get Newton Iteration Step working (Week 14/15)
+  2. Step size control (Week 15)
+  3. Error control (Week 16)
+  4. Documentation on RADAU solver and end of the Summer tasks
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+Journal Entry (Thursday/Friday)
+- After profiling and noticing that using the `Polynomials` package for computing $\gamma*_i$ is a significant part of the runtime of `ode113`, I realized that I only needed to compute $\gamma*_i$ for i = 1:16! I precalculated these, and have these values hard coded into the algorithm, which lead to an significant decrease in runtime. 
+- I also used ProfileView to determine which version of array assignments is quicker: in-place or out-of-place. Contrary to what we expected, in-place took longer and more memory. 
+Journal Entry 
