@@ -6,6 +6,7 @@ categories: weekly_updates
 ---
 
 ###Up-to-date plan for the remainder of the week
+
 3. (Thursday) __Main goal__: Identify speed slow downs 
   + Compare current version to version used to make plots for PR
   + Continue benchmarking with ProfileView
