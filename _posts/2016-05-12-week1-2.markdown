@@ -2,7 +2,7 @@
 layout: post
 title:  "Week 1-2 Recap"
 date:   2016-05-12 22:01:43 +0530
-categories: weeklyp_updates
+categories: weekly_updates
 ---
 
 ###Up-to-date plan for the remainder of the week
