@@ -5,7 +5,7 @@ date:   2016-08-16 22:01:43 +0530
 categories: journal entry
 author: "obiajulu"
 ---
-Wowww, the summer has flown by fast and Google SoC with it! It seems like yesterday that I starting developing for the Julia Language under my GSoC mentors Mauro Weiner ([@mauro3](https://github.com/mauro3)) and Jiahao Chen ([@jiahao](https://github.com/jiahao)). My project, in a nutshell, was to implement new ODE solvers for the [ODE.jl package](https://github.com/obiajulu/ODE.jl), and further develop the [IVPTestSuite.jl](https://github.com/mauro3/IVPTestSuite.jl) which is package for ODE solver benchmarking that @mauro3 made. (here is [my project proposal](https://josephobiajulu.files.wordpress.com/2016/08/obiajulu_julia_prop.pdf) if you are interested in reading more). 
+Wowww, the summer has flown by fast and Google SoC with it! It seems like yesterday that I starting developing for the Julia Language under my GSoC mentors Mauro Werder ([@mauro3](https://github.com/mauro3)) and Jiahao Chen ([@jiahao](https://github.com/jiahao)). My project, in a nutshell, was to implement new ODE solvers for the [ODE.jl package](https://github.com/obiajulu/ODE.jl), and further develop the [IVPTestSuite.jl](https://github.com/mauro3/IVPTestSuite.jl) which is package for ODE solver benchmarking that @mauro3 made. (here is [my project proposal](https://josephobiajulu.files.wordpress.com/2016/08/obiajulu_julia_prop.pdf) if you are interested in reading more). 
 
 Now, with only one week to go before the final code submission, I wanted to take this moment to pause and look back on all of the work the was done and some of the work still left to do. So, without further ado, here is my GSoc in recap:
 
