@@ -46,16 +46,16 @@ Currently, the solver is functional and performs comparably (as well or better) 
 #### __function evaluations for Pleidas problem `ode113` vs `ode45`__
 The real strength of Adam Bashforth methods is the minimal amount of derivative function evaluation one needs. For each iteration step, this function needs to be evaluated usually only twice (really twice for each attempt of a step, and steps are usually accepted). We present a table of the function evaluations necessary for `ode45` vs `ode113` used to solve the same Pleiadas problem above.
 
-|tol | ode113 | ode45|ode78|
+| tol | ode113 | ode45 | ode78 |
 |---|---|---|---|
-|1e-7 | 1115 | 2456| 1996|
-|1e-8 | 1327 | 3890| 4444|
-|1e-9 | 1557 | 6170| 7320|
-|1e-10 | 1859 | 9776|10698|
-|1e-11 | 2237 | 15488|15133|
-|1e-12 | 2875 | 24548| 21076|
-|1e-13 | 3869 | 38900| 29008|
-|1e-14 | 6179 | 61652| 39605|
+|1e-7 | 1115 | 2456 | 1996|
+|1e-8 | 1327 | 3890 | 4444|
+|1e-9 | 1557 | 6170 | 7320|
+|1e-10 | 1859 | 9776 | 10698|
+|1e-11 | 2237 | 15488 | 15133|
+|1e-12 | 2875 | 24548 | 21076|
+|1e-13 | 3869 | 38900 | 29008|
+|1e-14 | 6179 | 61652 | 39605|
 
 ### `ode_radau` : (WIP) an adaptive implicit Runge-Kutta ([code](https://github.com/obiajulu/ODE.jl/blob/radau/src/radau.jl), [commits](https://github.com/obiajulu/ODE.jl/commits/radau?author=obiajulu), [PR](https://github.com/obiajulu/ODE.jl/pull/3))
 
